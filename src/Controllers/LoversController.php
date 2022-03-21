@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-
+use App\Models\Lovers;
 
 class LoversController{
 
