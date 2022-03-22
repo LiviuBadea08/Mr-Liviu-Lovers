@@ -9,16 +9,32 @@ class LoversController{
 
     public function __construct()
     {
+        if (isset($_GET["action"]) && ($_GET["action"] == "delete")){
+            $this->delete($_GET["id"]);
+            return;
+        }
         $this->index();
+
     }
 
     public function index(){
         
         $lover = new Lovers();
         $lovers = $lover->all();
-
+        
         new Views("LoversList", ["lover"=> $lovers]);
     }
 
+    public function delete($id){
+        $loverHelper = new Lovers();
+        $lover = $loverHelper->findById($id);
+        $lover->delete();
+
+        $this->index();
+    }
+
+
+
 }
+
 ?>

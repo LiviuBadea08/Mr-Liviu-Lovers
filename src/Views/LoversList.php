@@ -19,6 +19,7 @@
                         <h6 class="card-text">{$lover->get_activity()}</h6>
                         <p class="card-text">{$lover->get_date_time()}</p>
                         <p class="card-text">{$lover->get_id()}</p>
+                        <a href ='?action=delete&id={$lover->get_id()}'>delete</a>
                     </div>
                 </div>
             </article>

@@ -56,5 +56,19 @@ class Lovers{
     public function get_date_time(){
         return $this->date_time;
     }
+
+    public function findById($id){
+        $query = $this->database->mysql->query("select * from {$this->table} where id={$id}");
+        $result = $query->fetchAll();
+        $lover = new Lovers($result[0]["id"], $result[0]["people"], $result[0]["type"], $result[0]["activity"], $result[0]["date_time"]);
+        
+
+        return $lover;
+    }
+
+    public function delete(){
+        $this->database->mysql->query("delete from {$this->table} where `{$this->table}`.`id`={$this->id}");
+    }
+
 }
 ?>
