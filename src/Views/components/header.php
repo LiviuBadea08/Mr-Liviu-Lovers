@@ -5,6 +5,7 @@
                 <img id="logo" src="./img/trindrer.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 Mr Love Liviu
             </a>
+            <a href="?action=create">ADD</a>
         </div>
     </nav>
 </header>

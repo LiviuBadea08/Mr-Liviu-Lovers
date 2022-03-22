@@ -13,7 +13,19 @@ class LoversController{
             $this->delete($_GET["id"]);
             return;
         }
+        if (isset($_GET["action"]) && ($_GET["action"] == "create")){
+            $this->create();
+            return;
+        }
+        if (isset($_GET["action"]) && ($_GET["action"] == "store")){
+            $this->store($_POST);
+            return;
+        }
+
+
         $this->index();
+
+
 
     }
 
@@ -23,6 +35,7 @@ class LoversController{
         $lovers = $lover->all();
         
         new Views("LoversList", ["lover"=> $lovers]);
+
     }
 
     public function delete($id){
@@ -33,6 +46,17 @@ class LoversController{
         $this->index();
     }
 
+    public function create(){
+        new Views("addLover");
+    }
+
+    public function store(array $request){
+        $lover = new Lovers(null, $request["people"],  $request["type"], $request["activity"]);
+        $lover->save();
+
+        $this->index();
+        
+    }
 
 
 }

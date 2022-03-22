@@ -61,7 +61,7 @@ class Lovers{
         $query = $this->database->mysql->query("select * from {$this->table} where id={$id}");
         $result = $query->fetchAll();
         $lover = new Lovers($result[0]["id"], $result[0]["people"], $result[0]["type"], $result[0]["activity"], $result[0]["date_time"]);
-        
+
 
         return $lover;
     }
@@ -69,6 +69,11 @@ class Lovers{
     public function delete(){
         $this->database->mysql->query("delete from {$this->table} where `{$this->table}`.`id`={$this->id}");
     }
+
+    public function save(){
+        $this->database->mysql->query("INSERT INTO `{$this->table}` (`people`, `type`, `activity`) VALUES ('$this->people', '$this->type', '$this->activity')");
+    }
+    
 
 }
 ?>
