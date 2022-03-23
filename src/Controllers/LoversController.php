@@ -22,11 +22,20 @@ class LoversController{
             return;
         }
 
+        if(isset($_GET["action"]) && ($_GET["action"]== "edit")){
+            $this->edit($_GET["id"]);
+            return;
+        }
+
+        if(isset($_GET["action"]) && ($_GET["action"]== "update")){
+            $this->update($_POST, $_GET["id"]);
+            return;
+        }
+
 
         $this->index();
 
-
-
+    
     }
 
     public function index(){
@@ -58,7 +67,21 @@ class LoversController{
         
     }
 
+    public function edit ($id){
+        $loverHelper = new Lovers();
+        $lover = $loverHelper->findById($id);
+        new Views ("editLovers", ["lover"=>$lover]);
+    }
 
+    public function update (array $request, $id){
+        $loverHelper = new Lovers();
+        $lover = $loverHelper->findById($id);
+        $lover->rename($request["people"], $request["type"], $request["activity"]);
+        $lover->update();
+
+        $this->index();
+    }
 }
+
 
 ?>

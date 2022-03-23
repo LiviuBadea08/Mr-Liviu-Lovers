@@ -20,6 +20,7 @@
                         <p class="card-text">{$lover->get_date_time()}</p>
                         <p class="card-text">{$lover->get_id()}</p>
                         <a href ='?action=delete&id={$lover->get_id()}'>delete</a>
+                        <a href = '?action=edit&id={$lover->get_id()}'>edit</a>
                     </div>
                 </div>
             </article>

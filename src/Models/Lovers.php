@@ -74,6 +74,19 @@ class Lovers{
         $this->database->mysql->query("INSERT INTO `{$this->table}` (`people`, `type`, `activity`) VALUES ('$this->people', '$this->type', '$this->activity')");
     }
     
+    public function rename($people, $type, $activity){
+        $this->people = $people;
+        $this->type = $type;
+        $this->activity = $activity;
+    }
+
+
+    public function update(){
+        $this->database->mysql->query("UPDATE `{$this->table}` SET `people`='$this->people',`type`='$this->type',`activity`='$this->activity' WHERE `id` = $this->id");
+    }
+    // TO DO: UPDATE
+
+    // UPDATE `citas` SET `people`='[value-2]',`type`='[value-3]',`activity`='[value-4]' WHERE `id` = id
 
 }
 ?>

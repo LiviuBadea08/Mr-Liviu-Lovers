@@ -41,8 +41,10 @@ main{
 }
 
 .back{
+    
+    text-decoration: none;
     background-color: #880D1E;
-    color: white
+    color: white;
 }
 
 .add{
