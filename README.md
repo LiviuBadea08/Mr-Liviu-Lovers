@@ -31,4 +31,4 @@ A Factoria F5 y a nuestros compañeros de promoción.
 ## Contributing
 Pull requests are not welcome as long as this is a BootCamp project.
 
-![https://github.com/abde955/Mr-Liviu-Lovers/blob/main/public/Captura%20de%20pantalla%20(50).png]
+![Foto de la pagina de inicio](https://github.com/abde955/Mr-Liviu-Lovers/blob/main/public/Captura%20de%20pantalla%20(50).png)
