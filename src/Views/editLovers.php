@@ -22,8 +22,36 @@
         <div class="box">
             <p>Tema</p>
             <select name="type">
-                <option value="1">Amorosa</option>
-                <option value="2">Amistosa</option>
+                
+                <?php
+                $type = $data["lover"]->get_type();
+
+                if ($type == "Friendship") {
+                    echo `
+                            <option value="" disabled>Select the Type</option>
+                            <option value="1">Amorosa</option>
+                            <option value="2" selected>Amistosa</option>
+                            `;
+                }
+                
+                if ($type == "Lovers") {
+                    echo `
+                            <option value="" disabled>Select the Type</option>
+                            <option value="1" selected>Amorosa</option>
+                            <option value="2">Amistosa</option>
+                         `;
+                }
+                
+                // switch($type) {
+                //     case "Love":
+                //         echo `
+                //             <option value="" disabled>Select the Type</option>
+                //             <option value="1" selected>Amorosa</option>
+                //             <option value="2">Amistosa</option>
+                //         `;
+                //         break;
+                // }
+                ?>
             </select>
         </div>
         <div class="box">
@@ -35,6 +63,7 @@
             <input class="btn btn-success" type="submit" value="Add">
         </div>
     </form>
+    <script src="https://kit.fontawesome.com/176919793f.js" crossorigin="anonymous"></script>
 </body>
 
 </html> 

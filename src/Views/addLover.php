@@ -34,5 +34,6 @@
                 <input class="button add" type="submit" value="Add">
             </div>
         </form>
+        <script src="https://kit.fontawesome.com/176919793f.js" crossorigin="anonymous"></script>
     </body>
 </html>
