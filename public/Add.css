@@ -1,0 +1,54 @@
+.bgPrimary {
+    background-color: #F26A8D;
+}
+.bgSecondary {
+    background-color: #bb1f33; 
+}
+
+
+.fredoka{
+    color: white;
+    font-family: "Fredoka" , sans-serif;
+    
+}
+
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.label_size{
+    font-size: 1.5em;
+}
+
+.button-cancel{
+    background-color: #F26A8D;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    width: 100px;
+}
+
+.button-confirm{
+    background-color: #CBEEF3;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 100px;
+}
+
+.form{
+    
+    border-radius: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;   
+}
+
+.box{
+    border-radius: 20px;
+}

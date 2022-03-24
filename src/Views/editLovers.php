@@ -4,40 +4,43 @@
         
     ?>
     <head>
-        <link rel="stylesheet" href="img/Add&Edit.css">
+        <link rel="stylesheet" href="public/Add.css">
     </head>
     <body>
         <?php
             require_once("components/header.php");
         ?>
 
-    <form class="form" action="?action=update&id=<?php echo $data["lover"]->get_id() ?>" method="post">
-        <div class="title">
-        <h1>Edit</h1>
-        </div>
-        <div class="box">
-            <p>Nombre</p>
-            <input type="text" name="people" value=<?php echo $data["lover"]->get_people() ?>>
-        </div>
-        <div class="box">
-            <p>Tema</p>
-            <select name="type">
-                <option value="1">Amorosa</option>
-                <option value="2">Amistosa</option>
-            </select>
-        </div>
-        <div class="box">
-            <p>Actividad</p>
-            <input type="text" name="activity" value="<?php echo $data["lover"]->get_activity() ?>">
-        </div>
-        <div class="buttons">
-            <a href="index.php" class="btn btn-danger">Back</a>
-            <input class="btn btn-success" type="submit" value="Add">
-        </div>
-    </form>
+        <main class="container">
+            <div class="d-flex align-items-center justify-content-center add-box">
+                <p class="px-5 py-3 my-2 montserrat box bgPrimary title text-white">Edit Date</p>
+            </div>
+            <div class="row justify-content-center aling-items-center box">
+                <form class="col-sm-4 fredoka bgSecondary form p-4" action="?action=update&id=<?php echo $data["lover"]->get_id() ?>" method="post">
+                    <div class="mb-3 form-group">
+                        <label for="people" class="form-label">People</label>
+                        <input type="text" name="people" required class="form-control box" id="people" aria-describedby="nombre" value=<?php echo $data["lover"]->get_people() ?>>
+                    </div>
+                    <div class="mb-3 fredoka">
+                        <p>Type of Date</p>
+                        <input type="text" name="type" class="form-control box" value="<?php echo $data["lover"]->get_type()?>">
+                    </div>
+                            <div class="mb-5">
+                                <label for="activity" class="form-label">Activity</label>
+                                <input type="text" name="activity" class="form-control box" id="activity" aria-describedby="actividad" required value="<?php echo $data["lover"]->get_activity() ?>">
+                            </div> 
+                    <div class="justify-content-evenly pt-1 pb-3 buttons">
+                        <a href="index.php" class="btn button-cancel montserrat">Cancel</a>
+                        <button type="submit" class="btn button-confirm montserrat">Confirm</button>
+                    </div>
+                </form>
+            </div>  
+        </main>
 </body>
 
 </html> 
+
+
 
 
 
