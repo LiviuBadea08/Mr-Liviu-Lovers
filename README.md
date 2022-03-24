@@ -1,6 +1,7 @@
 # Dr. Liviu Lover
 
 Dr. Liviu Lover es una app para apuntar, editar y eliminar citas amorosas.
+Se ha usado del paradigma MVC, con un CRUD para las citas.
 
 ## Requisitos
 
