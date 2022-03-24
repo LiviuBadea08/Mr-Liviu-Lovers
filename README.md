@@ -2,19 +2,29 @@
 
 Dr. Liviu Lover es una app para apuntar, editar y eliminar citas amorosas.
 
-## Instalación
+## Requisitos
 
-Hay que clonar el repositiorio, instalar Xampp, meter la carpeta del proyecto en ../xampp/htdocs e instalar el Compose para obtener la carpeta Vendor.
+> XAMPP
+
+> Composer
+
+## Primeros Pasos
+
+- Instalar Xampp 
+- Clonar el repositorio en la carpeta de instalación de Xampp (../xampp/htdocs)
+- Instalar Composer para obtener la carpeta Vendor. Lanza en terminal dentro de la carpeta:
+`composer install`
 
 ## Construido con:
 
 Para el desarrollo de esta app hemos usado:
 
+- Figma
 - HTML
 - CSS
 - Bootstrap
 - PHP Vanilla
-- Figma
+- MySQL
 
 Dr. Liviu Lover ha sido creado gracias a:
 
