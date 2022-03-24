@@ -3,9 +3,6 @@
         require_once("components/layout.php");
         
     ?>
-    <head>
-        <link rel="stylesheet" href="public/Add.css">
-    </head>
     <body>
         <?php
             require_once("components/header.php");
@@ -15,7 +12,7 @@
                 <p class="px-5 py-3 my-2 montserrat box bgPrimary title text-white">Add Date</p>
             </div>
             <div class="row justify-content-center aling-items-center box">
-                <form class="col-sm-4 fredoka bgSecondary form p-4">
+                <form class="col-sm-4 fredoka bgSecondary form p-4" action="?action=store" method="post">
                     <div class="mb-3 form-group">
                         <label for="people" class="form-label">People</label>
                         <input type="text" name="people" required class="form-control box" id="people" aria-describedby="nombre">
@@ -36,4 +33,5 @@
             </div>  
         </main>
     </body>
+    <script src="https://kit.fontawesome.com/176919793f.js" crossorigin="anonymous"></script>
 </html>

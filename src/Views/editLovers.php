@@ -3,14 +3,10 @@
         require_once("components/layout.php");
         
     ?>
-    <head>
-        <link rel="stylesheet" href="public/Add.css">
-    </head>
     <body>
         <?php
             require_once("components/header.php");
         ?>
-
         <main class="container">
             <div class="d-flex align-items-center justify-content-center add-box">
                 <p class="px-5 py-3 my-2 montserrat box bgPrimary title text-white">Edit Date</p>
@@ -36,6 +32,7 @@
                 </form>
             </div>  
         </main>
+        <script src="https://kit.fontawesome.com/176919793f.js" crossorigin="anonymous"></script>
 </body>
 
 </html> 
