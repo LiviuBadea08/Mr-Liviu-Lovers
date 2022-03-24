@@ -11,8 +11,8 @@
             <div class="d-flex align-items-center justify-content-center add-box">
                 <p class="px-5 py-3 my-2 montserrat box bgPrimary title text-white">Add Date</p>
             </div>
-            <div class="row justify-content-center aling-items-center box">
-                <form class="col-sm-4 fredoka bgSecondary form p-4" action="?action=store" method="post">
+            <div class="row justify-content-center aling-items-center">
+                <form class="col-sm-4 fredoka bgSecondary form p-4 box" action="?action=store" method="post">
                     <div class="mb-3 form-group">
                         <label for="people" class="form-label">People</label>
                         <input type="text" name="people" required class="form-control box" id="people" aria-describedby="nombre">

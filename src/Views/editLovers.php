@@ -7,12 +7,12 @@
         <?php
             require_once("components/header.php");
         ?>
-        <main class="container">
+        <main class="container box">
             <div class="d-flex align-items-center justify-content-center add-box">
                 <p class="px-5 py-3 my-2 montserrat box bgPrimary title text-white">Edit Date</p>
             </div>
-            <div class="row justify-content-center aling-items-center box">
-                <form class="col-sm-4 fredoka bgSecondary form p-4" action="?action=update&id=<?php echo $data["lover"]->get_id() ?>" method="post">
+            <div class="row justify-content-center aling-items-center ">
+                <form class="col-sm-4 fredoka bgSecondary form p-4 box" action="?action=update&id=<?php echo $data["lover"]->get_id() ?>" method="post">
                     <div class="mb-3 form-group">
                         <label for="people" class="form-label">People</label>
                         <input type="text" name="people" required class="form-control box" id="people" aria-describedby="nombre" value=<?php echo $data["lover"]->get_people() ?>>
