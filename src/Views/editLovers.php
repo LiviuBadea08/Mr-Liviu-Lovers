@@ -15,7 +15,7 @@
                 <form class="col-sm-4 fredoka bgSecondary form p-4" action="?action=update&id=<?php echo $data["lover"]->get_id() ?>" method="post">
                     <div class="mb-3 form-group">
                         <label for="people" class="form-label">People</label>
-                        <input type="text" name="people" required class="form-control box" id="people" aria-describedby="nombre" value=<?php echo $data["lover"]->get_people() ?>>
+                        <input type="text" name="people" required class="form-control box" id="people" aria-describedby="nombre" value="<?php echo $data["lover"]->get_people() ?>">
                     </div>
                     <div class="mb-3 fredoka">
                         <p>Type of Date</p>
